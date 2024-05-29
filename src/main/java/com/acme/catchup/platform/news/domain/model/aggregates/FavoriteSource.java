@@ -41,7 +41,6 @@ public class FavoriteSource extends AbstractAggregateRoot<FavoriteSource> {
     public FavoriteSource(CreateFavoriteSourceCommand command){
         this.newsApiKey = command.newsApiKey();
         this.sourceId = command.sourceId();
-        registerEvent(new FavoriteSourceCreatedEvent(this));
     }
 
 }
